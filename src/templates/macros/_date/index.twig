@@ -1,0 +1,4 @@
+{% macro format(date, style = 'long') %}{% apply spaceless %}
+    {%- set format = style == 'long' ? craft.getWabiDefaultSettings.longDateFormat : craft.getWabiDefaultSettings.shortDateFormat %}
+    {{- date|date(format) }}
+{% endapply %}{% endmacro %}

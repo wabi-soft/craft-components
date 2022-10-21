@@ -1,0 +1,10 @@
+{% set options = craft.getWabiDefaultSettings.components['post-meta']|merge(options|default({})) %}
+{% set profile = profile is defined ? profile : false %}
+
+{% if profile %}
+    {% set image = profile.image is defined ? profile.image : false %}
+    <div class="{{ craft.wabiClasses.components('profile-container', options) }}">
+        {% include 'wabi-components/_post-meta/profile-image.twig' with { image, options } only %}
+        {% include 'wabi-components/_post-meta/profile-name.twig' with { name: profile.name, options } only %}
+    </div>
+{% endif %}

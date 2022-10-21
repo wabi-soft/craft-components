@@ -1,0 +1,11 @@
+{% import 'wabi-macros/_index' as macros %}
+{% set options = craft.getWabiDefaultSettings.components['post-meta']|merge(options|default({})) %}
+{% block date %}
+    <div class="{{ craft.wabiClasses.components('date', options) }}">
+        {% if date is object %}
+            {{ macros.date(date) }}
+        {% else %}
+            {{ date }}
+        {% endif %}
+    </div>
+{% endblock %}

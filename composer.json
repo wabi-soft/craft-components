@@ -1,0 +1,31 @@
+{
+  "name": "wabisoft/components",
+  "description": "CSV, XLS and XLSX files to code to use in Twig.",
+  "type": "craft-plugin",
+  "license": "proprietary",
+  "authors": [
+    {
+      "name": "WabiSoft",
+      "homepage": "https://wabisoft.com"
+    }
+  ],
+  "support": {
+    "email": "help@wabisoft.com",
+    "issues": "https://github.com/wabi-soft/craft-spreadsheet-object/issues?state=open",
+    "source": "https://github.com/wabi-soft/craft-spreadsheet-object",
+    "docs": "https://github.com/wabi-soft/craft-spreadsheet-object/blob/master/README.md"
+  },
+  "require": {
+    "craftcms/cms": "^4.0.0",
+    "wabisoft/framework": "dev-main"
+  },
+  "autoload": {
+    "psr-4": {
+      "wabisoft\\components\\": "src/"
+    }
+  },
+  "extra": {
+    "name": "Craft Components",
+    "handle": "wabisoft-components"
+  }
+}

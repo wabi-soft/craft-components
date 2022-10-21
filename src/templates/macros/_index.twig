@@ -1,0 +1,4 @@
+{% macro date(date) %}
+    {% import 'wabi-macros/_date' as dateMacro %}
+    {{ dateMacro.format(date) }}
+{% endmacro %}

@@ -1,0 +1,9 @@
+{% if image %}
+<figure>
+    {% if image is iterable %}
+        <img class="{{ craft.wabiClasses.components('profile-image', options) }}" src="{{ image.url }}" alt="{{ image.title }}">
+    {% elseif image %}
+        <img class="{{ craft.wabiClasses.components('profile-image', options) }}" src="{{ image }}" alt="{{ profile.name|default('Profile Image') }}">
+    {% endif %}
+</figure>
+{% endif %}

@@ -1,0 +1,30 @@
+{% set options = (craft.getWabiDefaultSettings.components['post-meta'])|merge(options|default({})) %}
+
+{% set tags = tags is defined ? tags : false %}
+{% set profile = profile is defined ? profile : false %}
+{% set date = date is defined ? date : false %}
+
+<div class="{{ craft.wabiClasses.components('container', options) }}">
+    {% if options.profile and profile %}
+    <div>
+        {% block profile %}
+            {% include 'wabi-components/_post-meta/profile.twig' with { profile, options } only %}
+        {% endblock %}
+    </div>
+    {% endif %}
+    {% if options.date and date %}
+    <div>
+        {% block date %}
+            {% include 'wabi-components/_post-meta/date.twig' with { date, options } only %}
+        {% endblock %}
+    </div>
+    {% endif %}
+
+    {% if options.tags and tags %}
+    <div>
+        {% block tags %}
+            {% include 'wabi-components/_post-meta/tags.twig' with { tags, options } only %}
+        {% endblock %}
+    </div>
+    {% endif %}
+</div>
