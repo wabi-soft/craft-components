@@ -8,14 +8,14 @@
     {% if options.profile and profile %}
     <div>
         {% block profile %}
-            {% include 'wabi-components/_post-meta/profile.twig' with { profile, options } only %}
+            {{ wabiComponents({path: '_post-meta/profile.twig', profile, options}) }}
         {% endblock %}
     </div>
     {% endif %}
     {% if options.date and date %}
     <div>
         {% block date %}
-            {% include 'wabi-components/_post-meta/date.twig' with { date, options } only %}
+            {{ wabiComponents({path: '_post-meta/date.twig', date, options}) }}
         {% endblock %}
     </div>
     {% endif %}
@@ -23,7 +23,7 @@
     {% if options.tags and tags %}
     <div>
         {% block tags %}
-            {% include 'wabi-components/_post-meta/tags.twig' with { tags, options } only %}
+            {{ wabiComponents({path: '_post-meta/tags.twig', tags, options}) }}
         {% endblock %}
     </div>
     {% endif %}
