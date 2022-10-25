@@ -3,11 +3,17 @@
     { title: 'Template Hierarchy', url: '?show-template-hierarchy' },
     { title: 'Off', url:craft.app.request.pathInfo }
 ] %}
+{% set query = craft.app.request.getQueryStringWithoutPath %}
 <div class="group fixed bottom-1 right-1 z-[99999]">
     <span class="block w-4 h-4 rounded-full bg-black/10 group-hover:hidden"></span>
     <ul class="bg-black/80 rounded py-4 px-6 text-sm font-bold antialiased text-white hidden group-hover:block">
         {% for item in links %}
-            <li><a class="block py-1 opacity-80 hover:opacity-100" href="{{ item.url }}">{{ item.title }}</a></li>
+            {% set isActive = item.url|replace({'?':''}) == query ? true : false %}
+            <li>
+                <a class="block py-1 opacity-80 hover:opacity-100 flex gap-2 items-center" href="{{ item.url }}">
+                    <span class="w-[8px] h-[8px] rounded-full {{ isActive ? 'bg-green-500' : 'bg-white/20'}} "></span>
+                    {{ item.title }}
+                </a></li>
         {% endfor %}
     </ul>
 </div>
