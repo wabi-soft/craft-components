@@ -21,6 +21,7 @@ class Plugin extends \craft\base\Plugin
 
         if (Craft::$app->request->getIsSiteRequest()) {
             Craft::$app->view->registerTwigExtension(new Extension());
+            self::frontendHelper();
         }
 
         /*
@@ -54,6 +55,31 @@ class Plugin extends \craft\base\Plugin
             }
         );
     }
+
+    private static function frontendHelper() {
+        Event::on(
+            View::class,
+            View::EVENT_END_BODY,
+            function (Event $e)
+            {
+                if(!self::showFeHelper()) return false;
+
+                $content = Craft::$app
+                    ->view
+                    ->renderTemplate(
+                        'wabisoft-components/_plugin/links.twig',
+                        [],
+                        View::TEMPLATE_MODE_CP);
+                echo $content;
+            }
+        );
+    }
+
+    private static function showFeHelper() {
+        $isDev = Craft::$app->getConfig()->general->devMode;
+        return $isDev;
+    }
+
     protected function createSettingsModel() : Model
     {
         return new Settings();
