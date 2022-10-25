@@ -4,8 +4,10 @@
 {% if content %}
     {% set image = content.image is defined ? content.image : false %}
     {% set name = content.name is defined ? content.name : false %}
+    {% set name = name ? name : content.element | default(false) %} {# pass an element (user) #}
+    {% set url = content.url is defined ? content.url : false %}
     <div class="{{ craft.wabiClasses.components('profile-container', options) }}">
         {{ wabiComponents({path: 'post-meta/profile-image.twig', content: image, options}) }}
-        {{ wabiComponents({path: 'post-meta/profile-name.twig', content: name, options}) }}
+        {{ wabiComponents({path: 'post-meta/profile-name.twig', content: name, url, options}) }}
     </div>
 {% endif %}

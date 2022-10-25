@@ -1,5 +1,5 @@
 {% if content %}
 <div class="{{ craft.wabiClasses.components('profile-name', options) }}">
-    {{ content }}
+    By: {{ url ? "<a href='#{url}'>"|raw }}{{ content }}{{ url ? '</a>' }}
 </div>
 {% endif %}
