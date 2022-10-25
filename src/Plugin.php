@@ -31,14 +31,14 @@ class Plugin extends \craft\base\Plugin
             View::class,
             View::EVENT_REGISTER_SITE_TEMPLATE_ROOTS,
             function(RegisterTemplateRootsEvent $event) {
-                $event->roots['wabi-macros'] = __DIR__ . '/templates/macros';
+                $event->roots['_wabi-macros'] = __DIR__ . '/templates/macros';
             }
         );
         Event::on(
             View::class,
             View::EVENT_REGISTER_SITE_TEMPLATE_ROOTS,
             function(RegisterTemplateRootsEvent $event) {
-                $event->roots['wabi-components'] = __DIR__ . '/templates/components';
+                $event->roots['_wabi-components'] = __DIR__ . '/templates/components';
             }
         );
         /*

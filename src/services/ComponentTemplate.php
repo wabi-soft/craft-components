@@ -10,14 +10,14 @@ use craft\helpers\StringHelper;
 class ComponentTemplate
 {
     public static function load(array $variables = []): string {
-        $wabiPath = Plugin::getInstance()->getSettings()->defaultComponentsPath;
-        $overridePath = Plugin::getInstance()->getSettings()->overrideComponentsPath;
-        $path = ArrayHelper::getValue($variables, 'path') ?: '';
-        if($overridePath) {
-            $overridePath = StringHelper::trim($overridePath, '/');
-            $templates[] = $overridePath . '/' . $path;
-        }
-        $templates[] = $wabiPath . $path;
+        $templates = self::getPathHierarchy(ArrayHelper::getValue($variables, 'path') ?: '');
         return TemplateLoader::load($templates, $variables);
+    }
+
+    public static function getPathHierarchy($base) {
+        $overridePath = StringHelper::trim(Plugin::getInstance()->getSettings()->overrideComponentsPath, '/');
+        if ($overridePath)  $templates[] = $overridePath . '/' . $base;
+        $templates[] = Plugin::getInstance()->getSettings()->defaultComponentsPath . $base;
+        return $templates;
     }
 }

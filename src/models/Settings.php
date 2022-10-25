@@ -7,7 +7,7 @@ use craft\base\Model;
 
 class Settings extends Model
 {
-    public string $defaultComponentsPath = 'wabi-components/';
+    public string $defaultComponentsPath = '_wabi-components/';
     public string | bool $overrideComponentsPath = false;
     public bool $includeLayoutClasses = true;
     public string $dateLongFormat = "M d, Y";

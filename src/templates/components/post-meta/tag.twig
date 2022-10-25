@@ -1,0 +1,5 @@
+{% if content is iterable %}
+    <li class="{{ craft.wabiClasses.components('tags-tag', options) }}"><a href="{{ content.url }}">{{ content.title }}</a></li>
+{% else %}
+    <li class="{{ craft.wabiClasses.components('tags-tag', options) }}">{{ content }}</li>
+{% endif %}

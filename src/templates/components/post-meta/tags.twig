@@ -1,13 +1,11 @@
 {% apply spaceless %}
 {% set options = craft.getWabiDefaultSettings.components['post-meta']|merge(options|default({})) %}
-
-
-{% if tags | length %}
+{% if content | length %}
 <div class="{{ craft.wabiClasses.components('tags-container', options) }}">
     <strong class="{{ craft.wabiClasses.components('tags-label', options) }}">Tags:</strong>
     <ul class="flex gap-2">
-    {% for tag in tags %}
-        {{ wabiComponents({path: '_post-meta/tag.twig', tag, options}) }}
+    {% for tag in content %}
+        {{ wabiComponents({path: 'post-meta/tag.twig', content: tag, options}) }}
     {% endfor %}
     </ul>
 </div>

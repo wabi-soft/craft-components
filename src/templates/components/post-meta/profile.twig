@@ -1,0 +1,11 @@
+{% set options = craft.getWabiDefaultSettings.components['post-meta']|merge(options|default({})) %}
+{% set content = content is defined ? content : false %}
+
+{% if content %}
+    {% set image = content.image is defined ? content.image : false %}
+    {% set name = content.name is defined ? content.name : false %}
+    <div class="{{ craft.wabiClasses.components('profile-container', options) }}">
+        {{ wabiComponents({path: 'post-meta/profile-image.twig', content: image, options}) }}
+        {{ wabiComponents({path: 'post-meta/profile-name.twig', content: name, options}) }}
+    </div>
+{% endif %}
