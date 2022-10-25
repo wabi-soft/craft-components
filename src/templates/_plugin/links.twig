@@ -4,7 +4,7 @@
     { title: 'Off', url:craft.app.request.pathInfo }
 ] %}
 {% set query = craft.app.request.getQueryStringWithoutPath %}
-<div class="group fixed bottom-1 right-1 z-[99999]">
+<div class="group fixed p-2 bottom-0 right-0 z-[99999]">
     <span class="block w-4 h-4 rounded-full bg-black/10 group-hover:hidden"></span>
     <ul class="bg-black/80 rounded py-4 px-6 text-sm font-bold antialiased text-white hidden group-hover:block">
         {% for item in links %}
