@@ -46,6 +46,18 @@ class Settings extends Model
                 'tags-label' => '',
                 'tags-tag' => '',
             ]
+        ],
+        'notice' => [
+            'classes' => [
+                'container' => 'text-blue-500',
+                'inner' => '',
+                'closeBtn' => ''
+            ],
+            'classesLayout' => [
+                'container' => 'py-6 px-16',
+                'inner' => '',
+                'closeBtn' => ''
+            ]
         ]
     ];
 }

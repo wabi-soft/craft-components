@@ -1,0 +1,12 @@
+{% set options = {
+    label: 'X',
+    classes: 'p-2 rounded-full w-6 h-6 bg-gray-500 text-white'
+}|merge(options|default({})) %}
+
+<button
+        type="button"
+        @click="handleHide"
+        class="{{ options.classes }}"
+        aria-label="Dismiss">
+        {{ options.label }}
+</button>

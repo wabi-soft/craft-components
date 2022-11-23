@@ -9,6 +9,7 @@ use craft\web\twig\variables\CraftVariable;
 use craft\web\View;
 use wabisoft\components\models\Settings;
 use wabisoft\components\variables\ApplyClassesVariable;
+use wabisoft\components\variables\CookiesVariable;
 use wabisoft\components\variables\GetSettingsVariable;
 use yii\base\Event;
 use wabisoft\components\twigextensions\Extension;
@@ -52,6 +53,7 @@ class Plugin extends \craft\base\Plugin
                 $variable = $e->sender;
                 $variable->set('getWabiDefaultSettings', GetSettingsVariable::class);
                 $variable->set('wabiClasses', ApplyClassesVariable::class);
+                $variable->set('wabiCookie', CookiesVariable::class);
             }
         );
     }
