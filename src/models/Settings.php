@@ -12,6 +12,10 @@ class Settings extends Model
     public bool $includeLayoutClasses = true;
     public string $dateLongFormat = "M d, Y";
     public string $dateShortFormat = "d, Y";
+    public array | bool $includeJs = [
+        'alpine' => false,
+        'docCookie' => true,
+    ];
 
     public array $componentsPaths = [
       'post-meta' => '_post-meta'
@@ -48,15 +52,18 @@ class Settings extends Model
             ]
         ],
         'notice' => [
+            'button' => [
+              'label' => 'X',
+            ],
             'classes' => [
-                'container' => 'text-blue-500',
+                'container' => 'text-white bg-gray-500',
                 'inner' => '',
-                'closeBtn' => ''
+                'button' => ''
             ],
             'classesLayout' => [
-                'container' => 'py-6 px-16',
-                'inner' => '',
-                'closeBtn' => ''
+                'container' => 'w-full bg-gray-500',
+                'inner' => 'p-6 flex items-center w-full',
+                'button' => 'ml-auto'
             ]
         ]
     ];

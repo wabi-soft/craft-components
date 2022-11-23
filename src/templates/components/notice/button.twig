@@ -1,12 +1,10 @@
-{% set options = {
-    label: 'X',
-    classes: 'p-2 rounded-full w-6 h-6 bg-gray-500 text-white'
-}|merge(options|default({})) %}
+{% set options = (craft.getWabiDefaultSettings.components['notice'])|merge(options|default({})) %}
+{% set class = craft.wabiClasses.components('button', options) %}
 
 <button
         type="button"
         @click="handleHide"
-        class="{{ options.classes }}"
+        class="{{ class }}"
         aria-label="Dismiss">
-        {{ options.label }}
+        {{ options.button.label }}
 </button>

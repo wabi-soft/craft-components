@@ -1,15 +1,9 @@
 if(window.docCookies === undefined || typeof(docCookies) === 'undefined' ) {
-    let script = document.createElement('script');
-    document.body.appendChild(script);
-    script.type = 'text/javascript';
-    script.src = "//cdn.jsdelivr.net/npm/doc-cookies@1.1.0/cookies.min.js";
+    console.warn('docCookie not loaded');
 }
 
-if(window.Alpine === undefined) {
-    let script = document.createElement('script');
-    document.body.appendChild(script);
-    script.type = 'text/javascript';
-    script.src = "//unpkg.com/alpinejs@3.x.x/dist/cdn.min.js";
+if(typeof(Alpine) === undefined) {
+    console.warn('Alpine not loaded');
 }
 
 const WabiNotice = ($el) => {

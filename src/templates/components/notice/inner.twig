@@ -1,5 +1,9 @@
 <div class="{{ craft.wabiClasses.components('inner', options) }}">
-    {% block content %}{{ content }}{% endblock %}
+    {% block content %}
+    <div>
+        {{ content }}
+    </div>
+    {% endblock %}
     {% block button %}
         {{ wabiComponents({
             path: 'notice/button.twig',
