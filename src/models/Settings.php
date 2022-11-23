@@ -53,17 +53,20 @@ class Settings extends Model
         ],
         'notice' => [
             'button' => [
-              'label' => 'X',
+              'label' => false,
+              'icon' => true
             ],
             'classes' => [
-                'container' => 'text-white bg-gray-500',
+                'container' => 'text-white bg-gray-500 antialiased',
                 'inner' => '',
-                'button' => ''
+                'button' => '',
+                'icon' => 'fill-current text-white'
             ],
             'classesLayout' => [
                 'container' => 'w-full bg-gray-500',
-                'inner' => 'p-6 flex items-center w-full',
-                'button' => 'ml-auto'
+                'inner' => 'p-4 pl-6 flex items-center w-full',
+                'button' => 'ml-auto p-2',
+                'icon' => 'w-4 h-4'
             ]
         ]
     ];
