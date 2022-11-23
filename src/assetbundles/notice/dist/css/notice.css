@@ -1,3 +1,23 @@
 .notice--hidden {
     display: none;
 }
+.notice__container {
+    background-color: var(--notice-background-color, rgba(0,0,0,.8));
+}
+.notice__inner {
+    padding: var(--notice-padding, 1rem 1rem 1rem 1.5rem);
+    display: var(--notice-display, flex);
+    width: var(--notice-width, 100%);
+    font-size: var(--notice-font-size, 1rem);
+    color: var(--notice-text-color, #fff);
+}
+.notice__icon {
+    width: var(--notice-icon-width, 1rem);
+    height: var(--notice-icon-height, 1rem);
+    color: var(--notice-icon-color, #fff);
+    fill: currentColor;
+}
+.notice__button {
+    color: var(--notice-button-color, #fff);
+    margin: var(--notice-icon-margin, 0 0 0 auto);
+}

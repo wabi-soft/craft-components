@@ -57,16 +57,16 @@ class Settings extends Model
               'icon' => true
             ],
             'classes' => [
-                'container' => 'text-white bg-gray-500 antialiased',
+                'container' => 'antialiased',
                 'inner' => '',
                 'button' => '',
-                'icon' => 'fill-current text-white'
+                'icon' => ''
             ],
             'classesLayout' => [
-                'container' => 'w-full bg-gray-500',
-                'inner' => 'p-4 pl-6 flex items-center w-full',
-                'button' => 'ml-auto p-2',
-                'icon' => 'w-4 h-4'
+                'container' => 'notice__container',
+                'inner' => 'notice__inner',
+                'button' => 'notice__button',
+                'icon' => 'notice__icon'
             ]
         ]
     ];
