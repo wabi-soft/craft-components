@@ -5,9 +5,7 @@
         @click="handleHide"
         class="{{ class }}"
         aria-label="Dismiss">
-    {% if options.button.icon %}
     {{ wabiComponents({path: 'notice/icon.twig', options}) }}
-    {% endif %}
     {% if options.button.label %}
     <span>
         {{ options.button.label }}

@@ -42,6 +42,13 @@ class Plugin extends \craft\base\Plugin
                 $event->roots['_wabi-components'] = __DIR__ . '/templates/components';
             }
         );
+        Event::on(
+            View::class,
+            View::EVENT_REGISTER_SITE_TEMPLATE_ROOTS,
+            function(RegisterTemplateRootsEvent $event) {
+                $event->roots['wabi-ajax'] = __DIR__ . '/templates/ajax';
+            }
+        );
         /*
          * Register variables
          */

@@ -1,23 +1,16 @@
-{% set key = key|replace({'-': ''})|trim %}
-{% set isHidden = craft.wabiCookie.getBool(key, false) %}
-{% set render = isHidden ? 0 : 1 %}
-{% if render %}
-    {#
-     @link: https://releasecandidate.dev/posts/2021/how-to-use-cookies-with-alpinejs/
-     #}
-    {% set options = (craft.getWabiDefaultSettings.components['notice'])|merge(options|default({})) %}
+{#
+If this is a static cached site, we are unable
+to rely on checking whether to render the code or
+not based on the cookie. If the first user visits with
+the notice hidden, the HTML will be cached as such.
+#}
+{% if craft.getWabiDefaultSettings.blitzCaching %}
     {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
-    <div class="{{ craft.wabiClasses.components('container', options) }}"
-         x-data="WabiNotice($el)" data-key="{{ key }}">
-        <div :class="hidden === true ? 'notice--hidden' : ''">
-            {% block inner %}
-                {{ wabiComponents({
-                    path: 'notice/inner.twig',
-                    content,
-                    options,
-                    key })
-                }}
-            {% endblock %}
-        </div>
-    </div>
+    {{ craft.blitz.getUri('/wabi-ajax/notice/wrapper', {
+        key,
+        content
+    }) }}
+{% else %}
+    {% include '_wabi-components/notice/wrapper.twig' %}
 {% endif %}
+

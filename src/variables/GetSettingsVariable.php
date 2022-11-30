@@ -22,4 +22,8 @@ class GetSettingsVariable
     public static function shortDateFormat() {
         return Plugin::getInstance()->getSettings()->dateShortFormat;
     }
+    public static function blitzCaching() {
+        return Plugin::getInstance()->getSettings()->blitzCaching;
+    }
+
 }

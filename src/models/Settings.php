@@ -10,6 +10,7 @@ class Settings extends Model
     public string $defaultComponentsPath = '_wabi-components/';
     public string | bool $overrideComponentsPath = false;
     public bool $includeLayoutClasses = true;
+    public bool $blitzCaching = false;
     public string $dateLongFormat = "M d, Y";
     public string $dateShortFormat = "d, Y";
     public array | bool $includeJs = [
