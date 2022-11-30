@@ -12,9 +12,9 @@
   ],
   "support": {
     "email": "help@wabisoft.com",
-    "issues": "https://github.com/wabi-soft/craft-spreadsheet-object/issues?state=open",
-    "source": "https://github.com/wabi-soft/craft-spreadsheet-object",
-    "docs": "https://github.com/wabi-soft/craft-spreadsheet-object/blob/master/README.md"
+    "issues": "https://github.com/wabi-soft/craft-components/issues?state=open",
+    "source": "https://github.com/wabi-soft/craft-components",
+    "docs": "https://github.com/wabi-soft/craft-components/blob/main/README.md"
   },
   "require": {
     "craftcms/cms": "^4.0.0",
