@@ -1,4 +1,4 @@
 {% include '_wabi-components/notice/wrapper.twig' with {
     key: craft.app.request.getParam('key'),
-    content: craft.app.request.getParam('content')
+    content: craft.app.request.getParam('content')|json_decode
 } only %}

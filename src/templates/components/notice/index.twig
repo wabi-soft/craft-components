@@ -8,7 +8,7 @@ the notice hidden, the HTML will be cached as such.
     {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
     {{ craft.blitz.getUri('/wabi-ajax/notice/wrapper', {
         key,
-        content
+        content: content|json_encode
     }) }}
 {% else %}
     {% include '_wabi-components/notice/wrapper.twig' %}

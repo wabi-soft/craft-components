@@ -1,7 +1,7 @@
 <div class="{{ craft.wabiClasses.components('inner', options) }}">
     {% block content %}
     <div>
-        {{ content }}
+        {{ content|raw }}
     </div>
     {% endblock %}
     {% block button %}
