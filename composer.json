@@ -1,32 +1,48 @@
 {
-  "name": "wabisoft/components",
-  "description": "Proprietary set of components shared across projects for faster UX evolution and browser bug fixes as technology changes.",
-  "type": "craft-plugin",
-  "license": "proprietary",
-  "version": "1.0.10",
-  "authors": [
-    {
-      "name": "WabiSoft",
-      "homepage": "https://wabisoft.com"
+    "name": "wabisoft/components",
+    "description": "Proprietary set of components shared across projects for faster UX evolution and browser bug fixes as technology changes.",
+    "type": "craft-plugin",
+    "license": "proprietary",
+    "version": "0.0.1",
+    "scripts": {
+        "changelog": "conventional-changelog",
+        "release": "conventional-changelog --commit",
+        "release:patch": "conventional-changelog --patch --commit",
+        "release:minor": "conventional-changelog --minor --commit",
+        "release:major": "conventional-changelog --major --commit"
+    },
+    "authors": [
+        {
+            "name": "WabiSoft",
+            "homepage": "https://wabisoft.com"
+        }
+    ],
+    "support": {
+        "email": "help@wabisoft.com",
+        "issues": "https://github.com/wabi-soft/craft-components/issues?state=open",
+        "source": "https://github.com/wabi-soft/craft-components",
+        "docs": "https://github.com/wabi-soft/craft-components/blob/main/README.md"
+    },
+    "require": {
+        "craftcms/cms": "^4.0.0",
+        "wabisoft/framework": "^1.1.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "wabisoft\\components\\": "src/"
+        }
+    },
+    "extra": {
+        "name": "Craft Components",
+        "handle": "wabisoft-components"
+    },
+    "require-dev": {
+        "marcocesarato/php-conventional-changelog": "^1.16"
+    },
+    "config": {
+        "allow-plugins": {
+            "craftcms/plugin-installer": true,
+            "yiisoft/yii2-composer": true
+        }
     }
-  ],
-  "support": {
-    "email": "help@wabisoft.com",
-    "issues": "https://github.com/wabi-soft/craft-components/issues?state=open",
-    "source": "https://github.com/wabi-soft/craft-components",
-    "docs": "https://github.com/wabi-soft/craft-components/blob/main/README.md"
-  },
-  "require": {
-    "craftcms/cms": "^4.0.0",
-    "wabisoft/framework": "^1.1.0"
-  },
-  "autoload": {
-    "psr-4": {
-      "wabisoft\\components\\": "src/"
-    }
-  },
-  "extra": {
-    "name": "Craft Components",
-    "handle": "wabisoft-components"
-  }
 }
