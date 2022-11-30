@@ -16,15 +16,17 @@
     height: var(--notice__icon-h, 1rem);
     color: var(--notice__icon-text, #fff);
     fill: currentColor;
+    transition: all;
+    transition-duration: var(--notice__button-duration, 150ms);
 }
 .notice__button {
     color: var(--notice__button-text, #fff);
     margin: var(--notice__button-m, 0 0 0 auto);
     background: var(--notice__button-bg, transparent);
     padding: var(--notice__button-p, 0);
+    transition: all;
+    transition-duration: var(--notice__button-duration, 150ms);
 }
 .notice__button:hover .notice__icon {
-    transform: rotate(180);
-    transition: all;
-    transition-duration: 150ms;
+    transform: rotate(var(--notice__button-rotate, -90deg));
 }
