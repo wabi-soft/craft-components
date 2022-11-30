@@ -3,6 +3,8 @@
 }
 .notice__container {
     background: var(--notice__container-bg, rgba(0,0,0,.8));
+    display: var(--notice__container-display, flex);
+    justify-content: var(--notice__container-justify, center);;
 }
 .notice__inner {
     padding: var(--notice__inner-p, 1rem 1rem 1rem 1.5rem);
