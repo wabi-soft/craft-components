@@ -10,6 +10,7 @@
     padding: var(--notice__inner-p, 1rem 1rem 1rem 1.5rem);
     display: var(--notice__inner-display, flex);
     width: var(--notice__inner-w, 100%);
+    max-width: var(--notice__inner-max-w, 100%);
     font-size: var(--notice__inner-font-size, 1rem);
     color: var(--notice__inner-text, #fff);
 }
