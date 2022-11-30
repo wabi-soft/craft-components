@@ -1,4 +1,4 @@
-{% set options = (craft.getWabiDefaultSettings.components['post-meta'])|merge(options|default({})) %}
+{% set options = craft.getWabiDefaultSettings.componentByName('post-meta')|merge(options|default({})) %}
 {% set tags = tags is defined ? tags : false %}
 {% set profile = profile is defined ? profile : false %}
 {% set date = date is defined ? date : false %}

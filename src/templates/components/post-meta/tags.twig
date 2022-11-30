@@ -1,5 +1,5 @@
 {% apply spaceless %}
-{% set options = craft.getWabiDefaultSettings.components['post-meta']|merge(options|default({})) %}
+{% set options = craft.getWabiDefaultSettings.componentByName('post-meta')|merge(options|default({})) %}
 {% if content | length %}
 <div class="{{ craft.wabiClasses.components('tags-container', options) }}">
     <strong class="{{ craft.wabiClasses.components('tags-label', options) }}">Tags:</strong>

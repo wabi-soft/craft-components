@@ -1,4 +1,5 @@
-{% set options = (craft.getWabiDefaultSettings.components['notice'])|merge(options|default({})) %}
+{% set options = craft.getWabiDefaultSettings.componentByName('notice')|merge(options|default({})) %}
+
 {% set class = craft.wabiClasses.components('button', options) %}
 <button
         type="button"

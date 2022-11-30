@@ -12,8 +12,8 @@
     color: var(--notice__inner-text, #fff);
 }
 .notice__icon {
-    width: var(--notice__icon-w, 1rem);
-    height: var(--notice__icon-h, 1rem);
+    width: var(--notice__icon-w, 1.4rem);
+    height: var(--notice__icon-h, 1.4rem);
     color: var(--notice__icon-text, #fff);
     fill: currentColor;
     transition: all;

@@ -1,4 +1,4 @@
-{% set options = craft.getWabiDefaultSettings.components['post-meta']|merge(options|default({})) %}
+{% set options = craft.getWabiDefaultSettings.componentByName('post-meta')|merge(options|default({})) %}
 {% set content = content is defined ? content : false %}
 
 {% if content %}

@@ -6,19 +6,20 @@
 {#
 @link: https://releasecandidate.dev/posts/2021/how-to-use-cookies-with-alpinejs/
 #}
-{% set options = (craft.getWabiDefaultSettings.components['notice'])|merge(options|default({})) %}
-{% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
-<div class="{{ craft.wabiClasses.components('container', options) }}"
-     x-data="WabiNotice($el)" data-key="{{ key }}">
-    <div :class="hidden === true ? 'notice--hidden' : ''">
-        {% block inner %}
-            {{ wabiComponents({
-                path: 'notice/inner.twig',
-                content,
-                options,
-                key })
-            }}
-        {% endblock %}
+    {% set options = craft.getWabiDefaultSettings.componentByName('notice')|merge(options|default({})) %}
+    {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
+    <div class="{{ craft.wabiClasses.components('container', options) }}"
+         x-data="WabiNotice($el)" data-key="{{ key }}">
+        <div :class="hidden === true ? 'notice--hidden' : ''">
+            {% block inner %}
+                {{ wabiComponents({
+                    path: 'notice/inner.twig',
+                    content,
+                    options,
+                    key })
+                }}
+            {% endblock %}
+        </div>
     </div>
-</div>
+
 {% endif %}

@@ -9,6 +9,7 @@ class Settings extends Model
 {
     public string $defaultComponentsPath = '_wabi-components/';
     public string | bool $overrideComponentsPath = false;
+    public bool $includeDefaultClasses = true;
     public bool $includeLayoutClasses = true;
     public bool $blitzCaching = false;
     public string $dateLongFormat = "M d, Y";
@@ -22,8 +23,10 @@ class Settings extends Model
       'post-meta' => '_post-meta'
     ];
 
-
     public array $componentsOptions = [
+
+    ];
+    public array $defaultComponentsOptions = [
         /*
          * Post meta defaults
          */
