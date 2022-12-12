@@ -27,8 +27,6 @@ class WabiNoticeAsset extends AssetBundle
         $this->css = [
             'css/notice.css',
         ];
-
-
         parent::init();
     }
 }

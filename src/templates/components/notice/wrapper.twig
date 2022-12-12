@@ -8,6 +8,7 @@
 #}
     {% set options = craft.getWabiDefaultSettings.componentByName('notice')|merge(options|default({})) %}
     {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
+    {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\shared\\WabiSharedAsset") %}
     <div class="{{ craft.wabiClasses.components('container', options) }}"
          x-data="WabiNotice($el)" data-key="{{ key }}">
         <div :class="hidden === true ? 'notice--hidden' : ''">
