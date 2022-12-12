@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.0.16](https://github.com/wabi-soft/craft-components/compare/v1.0.15...v1.0.16) (2022-12-12)
+
+### Bug Fixes
+
+* Change loading order on js if all of it is required ([487e20](https://github.com/wabi-soft/craft-components/commit/487e2033773820aaa7e7f0e08c289edd82713306))
+
+
+---
+
 ## [1.0.15](https://github.com/wabi-soft/craft-components/compare/v1.0.14...v1.0.15) (2022-12-12)
 
 ### Bug Fixes
