@@ -15,14 +15,14 @@ class WabiNoticeAsset extends AssetBundle
         $this->sourcePath = "@wabisoft/components/assetbundles/notice/dist";
         $include = Plugin::getInstance()->getSettings()->includeJs;
         $scripts = [];
-
-        if($include['alpine']) {
-            $scripts[] = 'js/alpine.js';
-        }
+        $scripts[] = 'js/notice.js';
         if($include['docCookie']) {
             $scripts[] = 'js/cookie.js';
         }
-        $scripts[] = 'js/notice.js';
+        if($include['alpine']) {
+            $scripts[] = 'js/alpine.js';
+        }
+
         $this->js = $scripts;
         $this->css = [
             'css/notice.css',
