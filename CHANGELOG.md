@@ -4,6 +4,15 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.0.15](https://github.com/wabi-soft/craft-components/compare/v1.0.14...v1.0.15) (2022-12-12)
+
+### Bug Fixes
+
+* Typo ([3a9cf7](https://github.com/wabi-soft/craft-components/commit/3a9cf795ac1085f616c8f0cb9acf57afa6e5b489))
+
+
+---
+
 ## [1.0.14](https://github.com/wabi-soft/craft-components/compare/v1.0.13...v1.0.14) (2022-12-12)
 
 
