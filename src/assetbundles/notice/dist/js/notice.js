@@ -1,11 +1,3 @@
-if(window.docCookies === undefined || typeof(docCookies) === 'undefined' ) {
-    console.warn('docCookie not loaded');
-}
-
-if(typeof(Alpine) === undefined) {
-    console.warn('Alpine not loaded');
-}
-
 const WabiNotice = ($el) => {
     return {
         keyValue: true,
@@ -16,6 +8,9 @@ const WabiNotice = ($el) => {
             this.keyValue = true;
             this.keyName = $el.dataset.key;
             this.getCookie()
+            this.$nextTick(() => {
+                $el.classList.add('notice--loaded')
+            })
         },
 
         checkHidden() {
@@ -29,6 +24,7 @@ const WabiNotice = ($el) => {
 
         handleHide() {
           this.hidden = true;
+          $el.classList.remove('notice--loaded')
           docCookies.setItem(`${this.keyName}`, false, this.time)
         },
 

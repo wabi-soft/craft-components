@@ -1,4 +1,5 @@
 :root {
     --components-default-duration: var(--components-duration, 150ms);
+    --components-default-duration-slow: var(--components-duration-slow, 500ms);
     --components-default-ease: var(--components-ease, ease-out);
 }

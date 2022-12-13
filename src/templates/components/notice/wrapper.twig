@@ -10,8 +10,10 @@
     {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
     {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\shared\\WabiSharedAsset") %}
     <div class="{{ craft.wabiClasses.components('container', options) }}"
-         x-data="WabiNotice($el)" data-key="{{ key }}">
-        <div :class="hidden === true ? 'notice--hidden' : ''">
+         x-data="WabiNotice($el)"
+         :class="hidden === true ? 'notice--hiding' : ''"
+        data-key="{{ key }}">
+        <div :class="hidden === true ? 'notice--hiding' : ''">
             {% block inner %}
                 {{ wabiComponents({
                     path: 'notice/inner.twig',
