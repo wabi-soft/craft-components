@@ -3,7 +3,7 @@
     "description": "Proprietary set of components shared across projects for faster UX evolution and browser bug fixes as technology changes.",
     "type": "craft-plugin",
     "license": "proprietary",
-    "version": "1.0.16",
+    "version": "1.0.17",
     "scripts": {
         "changelog": "conventional-changelog",
         "release": "conventional-changelog --commit",
