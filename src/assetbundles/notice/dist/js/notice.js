@@ -3,7 +3,7 @@ const WabiNotice = ($el) => {
         keyValue: true,
         keyName: false,
         hidden: false,
-        time: (60*24*60*60),
+        time: (60*24*60*7),
         init() {
             this.keyValue = true;
             this.keyName = $el.dataset.key;
@@ -15,7 +15,6 @@ const WabiNotice = ($el) => {
 
         checkHidden() {
           if(this.keyValue === false || this.keyValue === 'false') {
-              console.log(this.keyValue)
               this.hidden = true;
           } else {
               this.hidden = false;
