@@ -24,12 +24,12 @@ const WabiNotice = ($el) => {
         handleHide() {
           this.hidden = true;
           $el.classList.remove('notice--loaded')
-          docCookies.setItem(`${this.keyName}`, false, this.time)
+          docCookies.setItem(`${this.keyName}`, false, this.time, '/')
         },
 
         handleShow() {
             this.hidden = false;
-            docCookies.setItem(`${this.keyName}`, true, this.time)
+            docCookies.setItem(`${this.keyName}`, true, this.time, '/')
         },
 
         getCookie() {
