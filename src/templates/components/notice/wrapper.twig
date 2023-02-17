@@ -7,8 +7,8 @@
 @link: https://releasecandidate.dev/posts/2021/how-to-use-cookies-with-alpinejs/
 #}
     {% set options = craft.getWabiDefaultSettings.componentByName('notice')|merge(options|default({})) %}
-    {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\notice\\WabiNoticeAsset") %}
-    {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\shared\\WabiSharedAsset") %}
+    {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\Notice") %}
+    {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\Shared") %}
     <div class="{{ craft.wabiClasses.components('container', options) }}"
          x-data="WabiNotice($el)"
          :class="hidden === true ? 'notice--hiding' : ''"

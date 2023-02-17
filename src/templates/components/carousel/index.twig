@@ -1,0 +1,12 @@
+{#
+If this is a static cached site, we are unable
+to rely on checking whether to render the code or
+not based on the cookie. If the first user visits with
+the notice hidden, the HTML will be cached as such.
+#}
+{% if craft.getWabiDefaultSettings.blitzCaching %}
+
+{% else %}
+    {% include '_wabi-components/carousel/wrapper.twig' %}
+{% endif %}
+

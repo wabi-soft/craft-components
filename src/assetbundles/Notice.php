@@ -1,18 +1,15 @@
 <?php
 
-namespace wabisoft\components\assetbundles\notice;
+namespace wabisoft\components\assetbundles;
 
-use wabisoft\components\Plugin;
-use Craft;
 use craft\web\AssetBundle;
-use craft\web\assets;
+use wabisoft\components\Plugin;
 
-
-class WabiNoticeAsset extends AssetBundle
+class Notice extends AssetBundle
 {
     public function init()
     {
-        $this->sourcePath = "@wabisoft/components/assetbundles/notice/dist";
+        $this->sourcePath = "@wabisoft/components/web/assets/dist";
         $include = Plugin::getInstance()->getSettings()->includeJs;
         $scripts = [];
         $scripts[] = 'js/notice.js';
