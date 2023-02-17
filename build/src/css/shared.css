@@ -3,3 +3,6 @@
     --components-default-duration-slow: var(--components-duration-slow, 500ms);
     --components-default-ease: var(--components-ease, ease-out);
 }
+.testing {
+    font-size: 10px;
+}

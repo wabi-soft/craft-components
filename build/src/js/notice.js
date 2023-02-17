@@ -1,4 +1,4 @@
-import docCookies from "../../dist/js/cookie";
+import docCookies from "doc-cookies";
 
 const WabiNotice = ($el) => {
   return {

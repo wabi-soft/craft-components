@@ -8,7 +8,7 @@
     }
 }
 .swiper,
-swiper-container {
+.swiper-container {
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -43,7 +43,7 @@ swiper-container {
     touch-action: pan-x;
 }
 .swiper-slide,
-swiper-slide {
+.swiper-slide {
     flex-shrink: 0;
     /*width: 100%;*/
     height: 100%;
@@ -186,7 +186,7 @@ swiper-slide {
     border-top-color: transparent;
 }
 .swiper:not(.swiper-watch-progress),
-swiper-container:not(.swiper-watch-progress),
+.swiper-container:not(.swiper-watch-progress),
 .swiper-watch-progress .swiper-slide-visible {
 .swiper-lazy-preloader {
     animation: swiper-preloader-spin 1s infinite linear;
