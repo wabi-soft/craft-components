@@ -1,6 +1,6 @@
 // import Swiper JS
-import Swiper from 'swiper';
-// import Swiper styles
-// import 'swiper/css';
-
-Swiper.start();
+// import Swiper from 'swiper';
+// // import Swiper styles
+// // import 'swiper/css';
+//
+// Swiper.start();
