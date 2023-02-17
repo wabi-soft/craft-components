@@ -43,3 +43,5 @@ const WabiNotice = ($el) => {
     },
   }
 }
+
+window.WabiNotice = WabiNotice

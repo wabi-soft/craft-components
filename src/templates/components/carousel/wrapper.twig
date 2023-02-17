@@ -1,10 +1,18 @@
 {% do view.registerAssetBundle("wabisoft\\components\\assetbundles\\Carousel") %}
-<div class="swiper" x-data="Carousel($el)">
+{% set options = ({
+    spaceBetween: 0,
+    overflow: 'hidden',
+    class: {
+        cell: 'w-[600px]'
+    },
+})|merge(options|default({})) %}
+
+<div class="swiper {{ options.overflow == 'hidden' ? 'swiper--overflow-hidden' }}" x-data="Carousel($el)">
     <!-- Additional required wrapper -->
     <div class="swiper-wrapper my-16">
         <!-- Slides -->
         {% for cell in cells %}
-            <div class="w-[528px] swiper-slide">
+            <div class="{{ options.class.cell }} swiper-slide">
                 {{ cell }}
             </div>
         {% endfor %}
@@ -13,8 +21,8 @@
     <div class="swiper-pagination"></div>
 
     <!-- If we need navigation buttons -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev">PREV</div>
+    <div class="swiper-button-next">NEXT</div>
 
     <!-- If we need scrollbar -->
     {#    <div class="swiper-scrollbar"></div>#}
@@ -33,7 +41,7 @@
           threshold: 7, // px value before scroll https://swiperjs.com/swiper-api#param-threshold
           watchSlidesProgress: true,
           watchSlidesVisibility: true,
-          spaceBetween: 20,
+          spaceBetween: {{ options.spaceBetween }},
           slidesPerGroupAuto: true,
         })
       }
