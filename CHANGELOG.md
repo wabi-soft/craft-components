@@ -4,6 +4,11 @@
 All notable changes to this project will be documented in this file.
 <!--- END HEADER -->
 
+## [1.0.20](https://github.com/wabi-soft/craft-components/compare/v1.0.19...v1.0.20) (2023-05-17)
+
+
+---
+
 ## [1.0.19](https://github.com/wabi-soft/craft-components/compare/v1.0.18...v1.0.19) (2022-12-13)
 
 
