@@ -3,7 +3,7 @@
     "description": "Proprietary set of components shared across projects for faster UX evolution and browser bug fixes as technology changes.",
     "type": "craft-plugin",
     "license": "proprietary",
-    "version": "1.0.20",
+    "version": "5.0.0",
     "scripts": {
         "changelog": "conventional-changelog",
         "release": "conventional-changelog --commit",
@@ -24,8 +24,8 @@
         "docs": "https://github.com/wabi-soft/craft-components/blob/main/README.md"
     },
     "require": {
-        "craftcms/cms": "^4.0.0",
-        "wabisoft/framework": "^1.1.0"
+        "craftcms/cms": "^5.0.0",
+        "wabisoft/framework": "^5.0.0"
     },
     "autoload": {
         "psr-4": {
