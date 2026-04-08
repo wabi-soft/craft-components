@@ -10,6 +10,7 @@ const WabiNotice = ($el) => {
       this.getCookie()
       this.$nextTick(() => {
         $el.classList.add('notice--loaded')
+        window.dispatchEvent(new CustomEvent('wabi:notice-loaded', { detail: { el: $el } }))
       })
     },
 
@@ -24,6 +25,7 @@ const WabiNotice = ($el) => {
     handleHide() {
       this.hidden = true;
       $el.classList.remove('notice--loaded')
+      window.dispatchEvent(new CustomEvent('wabi:notice-hidden', { detail: { el: $el } }))
       docCookies.setItem(`${this.keyName}`, false, this.time, '/')
     },
 
